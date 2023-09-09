@@ -17,7 +17,7 @@ export default function Home() {
         <p>
           Switch to Scroll Sepolia Testnet before claiming
         </p>
-        <Web3Button style={{"width": "200px", "height": "50px", "font-weight": "600"}}
+        <Web3Button style={{"width": "200px", "height": "50px", "font-weight": "600", "font-size": "18px"}}
           contractAddress="0xA9e6eF1F9533f43badA125CbcDFA5eeA35BE4475"
           contractAbi={[{"type":"constructor","stateMutability":"nonpayable","inputs":[]},{"type":"function","stateMutability":"nonpayable","outputs":[],"name":"claim","inputs":[]},{"type":"function","stateMutability":"view","outputs":[{"type":"uint256","name":"","internalType":"uint256"}],"name":"claimAmount","inputs":[]},{"type":"function","stateMutability":"view","outputs":[{"type":"address","name":"","internalType":"address"}],"name":"owner","inputs":[]},{"type":"function","stateMutability":"view","outputs":[{"type":"bool","name":"","internalType":"bool"}],"name":"received","inputs":[{"type":"address","name":"","internalType":"address"}]},{"type":"function","stateMutability":"nonpayable","outputs":[],"name":"setClaimAmount","inputs":[{"type":"uint256","name":"amount","internalType":"uint256"}]},{"type":"function","stateMutability":"view","outputs":[{"type":"address","name":"","internalType":"address"}],"name":"usdc","inputs":[]}]}
           action={(contract) => contract.call("claim")}

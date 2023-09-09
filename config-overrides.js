@@ -2,7 +2,13 @@ const webpack = require("webpack");
 
 module.exports = function override(config) {
   const fallback = config.resolve.fallback || {};
-  config.resolve.fallback = fallback;
+  config.resolve.fallback = {
+    ...fallback,
+    http: false,
+    https: false,
+    zlib: false,
+    url: false
+  };
   config.plugins = (config.plugins || []).concat([
     new webpack.ProvidePlugin({
       process: "process/browser",
